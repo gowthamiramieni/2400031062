@@ -1,0 +1,43 @@
+// UserCard.js
+import React from 'react';
+
+const UserCard = ({ name, age, bio }) => {
+  const cardStyle = {
+    border: '1px solid #ddd',
+    borderRadius: '8px',
+    padding: '16px',
+    maxWidth: '300px',
+    boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
+    fontFamily: 'Arial, sans-serif',
+    backgroundColor: '#fff'
+  };
+
+  const nameStyle = {
+    fontSize: '1.5rem',
+    fontWeight: 'bold',
+    marginBottom: '8px',
+    color: '#333'
+  };
+
+  const ageStyle = {
+    fontSize: '1rem',
+    color: '#777',
+    marginBottom: '12px'
+  };
+
+  const bioStyle = {
+    fontSize: '1rem',
+    lineHeight: '1.4',
+    color: '#555'
+  };
+
+  return (
+    <div style={cardStyle}>
+      <div style={nameStyle}>{name}</div>
+      <div style={ageStyle}>Age: {age}</div>
+      <div style={bioStyle}>{bio}</div>
+    </div>
+  );
+};
+
+export default UserCard;
